@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadoeres</title>
+    <link rel="shotcut icon" href="./866a3220d04a6d5ef3cbd98a03fa3d52.jpg"">
+</head>
+<body>
+    <script>
+
+        //Operadores
+        
+        let = num1 = 20
+        let = num2 = 30
+
+        let suma = num1 + num2
+        let resta = num1 - num2
+        let multi = num1 * num2
+        let divi = num1 / num2
+        let mod = num1 % num2
+
+        document.write(`${num1} + ${num2} = ${suma} <br>`)
+        document.write(`${num1} - ${num2} = ${resta} <br>`)
+        document.write(`${num1} * ${num2} = ${multi} <br>`)
+        document.write(`${num1} / ${num2} = ${divi} <br>`)
+        document.write(`${num1} % ${num2} = ${mod} <br>`)
+        
+        //Tipo de dados 
+
+        let nome = "Lucas"
+        let idade = 20
+        let altura = 1.70
+        let estudante = true
+        let curso = null
+        let lista = ["Lucas", "Ana", "Maria", "Joao"]
+
+        document.write(`Nome: ${typeof nome} <br>`)        
+        document.write(`Idade: ${typeof idade} <br>`)
+        document.write(`Altura: ${typeof altura} <br>`)        
+        document.write(`Estudante: ${typeof estudante} <br>`)
+        document.write(`Curso: ${typeof curso} <br>`)  
+        document.write(`Lista: ${typeof lista} <br>`)
+         
+        function Soma(a, b) {
+            document.write(a + b)      
+        }
+
+        let SomaArrow = (a, b) => {
+            return a + b
+        }
+        
+        let soma2 = (a, b) => a + b
+       
+        let quadrado = a => a*a 
+        document.write(quadrado(100))
+
+        let idade1 = 51
+
+        if(idade1 >= 18)
+        {
+            console.log("Maior de idade")
+        }
+        else 
+        {
+            console.log("Menor de idade")
+        }
+
+
+        let podeVotar = (idade1 >= 18) ? "Pode votar" : "Nao pode votar"
+        console.log(podeVotar) 
+
+        let podeVotar2 = (idade1 >= 18) ? "Pode votar" : (idade1 >= 12) ? "adolescente" : "Crianca"
+        console.log(podeVotar2)
+        
+        let podeVotar3 = (idade1 >= 18 && idade >= 65) ? "Pode votar" : "Nao pode votar"
+        console.log(podeVotar3)
+
+        let podeVotar4 = (idade1 >= 18 || idade >= 65) ? "Pode votar" : "Nao pode votar"
+        console.log(podeVotar4)
+
+        let podeVotar5 = (idade1 != 18) ? "Pode votar" : "Nao pode votar"
+        console.log(podeVotar5)
+
+        let dia = 5
+
+        switch (dia) {
+            case 1:
+                console.log("Segunda")
+                break;
+            case 2:
+                console.log("Terca")
+                break;
+            case 3:
+                console.log("Quarta")
+                break;
+            case 4:
+                console.log("Quinta")
+                break;
+            case 5:
+                console.log("Sexta")
+                break;
+            case 6:
+                console.log("Sabado")
+                break;
+            case 7:
+                console.log("Domingo")
+                break;
+            default:
+                console.log("Dia invalido")
+                break;
+        }
+
+        
+        for(let i = 0 ; i < 10 ; i++)
+        {
+            console.log(i)
+        }
+
+        for(let i = 0 ; i < 10 ; i++)
+        {
+            if(i == 5)
+            {
+                continue
+            }
+            console.log(i)
+        }
+
+        let x = 1
+
+        while(x < 10)
+        {
+            x++
+            document.write("<br>" + "gueixo")
+        }
+
+        console.log("asfdasdasd")
+
+
+
+    </script>
+
+</body>
+</html>
