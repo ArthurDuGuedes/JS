@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TS no navegador</title>
+    <script src="https://unpkg.com/typescript@latest/lib/typescript.js"></script>
+
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js" ></script>
+</head>
+<body>
+    <h1>Ts direto</h1>
+    <input type="text" id="nome" placeholder="Digite seu Nome">
+    <button onclick="saudarTratado()">Enviar</button>
+
+    <script type="text/typescript">
+    function saudarTratado():void{
+       
+        const input = document.getElementById("nome")
+
+        if(input && input instanceof HTMLInputElement){
+            const nome = input.value.trim()
+
+            
+            if (nome === "") {
+                alert("Digite seu nome")
+            }
+            else{
+                console.error("Bem vindo " + nome)
+            }
+        }
+        else{
+            alert("Elemento com id 'saudacao' nao encontrado")    
+        }
+    }
+
+    </script>
+
+    <script>
+        const typescript = document.querySelector('script[type="text/typescript"]');
+        const jsCode = ts.transpile(typescript.textContent);
+        const js = document.createElement('script');
+        js.type = 'text/javascript';
+        js.textContent = jsCode
+        document.body.appendChild(js);
+    </script>
+</body>
+</html>
